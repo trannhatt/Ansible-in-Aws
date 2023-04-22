@@ -1,0 +1,15 @@
+---
+- hosts: server-01
+  become: true
+  tasks:
+    - name: Ping host
+      ping: ~
+    - name: Install nginx
+      apt:
+        name: nginx
+
+    - name: include web role
+      include_role:
+        name: server-01-web-app
+      tags:
+        - deployments

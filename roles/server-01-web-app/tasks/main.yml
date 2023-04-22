@@ -1,0 +1,13 @@
+---
+- name: Install Apache.
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - apache2
+    - mysql-server
+- name: deploy html file
+  template:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify: restart web

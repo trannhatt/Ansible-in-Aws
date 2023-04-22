@@ -6,7 +6,7 @@
 ## Summary
 - 1 ec2.t2.micro use as ansible-machine, 3 ec2.t2.micro use as server to deploy the application.
 - I will create keypair on ansible-machine and use the keypair establish ssh connection to server.
-- reate security group that allows ssh access.
+- Create security group that allows ssh access.
 - 3 ec2.t2.micro will configure with ansible and install website-demo nginx in server-01, install docker \& run container in server-02.
 - I will create ansible playbook a playbook contains a list of commands called tags that I want to run on the servers.
 - Next, I will also create an inventory file (hosts) contains private ip address of ec2 I want to configure and execute playbook.

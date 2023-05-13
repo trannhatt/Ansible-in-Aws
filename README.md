@@ -4,12 +4,10 @@
 <img src="https://webexample75.files.wordpress.com/2023/04/architecture-image.png" height="auto" width="100%" />
 
 ## Summary
-- 1 ec2.t2.micro use as ansible-machine, 3 ec2.t2.micro use as server to deploy the application.
-- I will create keypair on ansible-machine and use the keypair establish ssh connection to server.
-- Create security group that allows ssh access.
-- 3 ec2.t2.micro will configure with ansible and install website-demo nginx in server-01, install docker \& run container in server-02.
-- I will create ansible playbook a playbook contains a list of commands called tags that I want to run on the servers.
-- Next, I will also create an inventory file (hosts) contains private ip address of ec2 I want to configure and execute playbook.
+-To complete this project, I create one EC2 instance as an Ansible machine and three EC2 instances as servers to install the application. I create a key pair on the Ansible machine to establish an SSH connection to the servers.
+- Next, I create a security group that allows SSH access. Then, I configure 3 ec2.t2.micro instances using Ansible to install the 'website-demo' Nginx on server-01 and run a Docker container on server-02.  
+- To do this, I create an Ansible playbook containing a list of commands called tags that I want to run on the servers.
+- Finally, I create an inventory file (hosts) containing the private IP addresses of the EC2 instances that I want to configure and execute the playbook on.
 ## Set up 
 ### Prerequisites
 - **[Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)** installed.
